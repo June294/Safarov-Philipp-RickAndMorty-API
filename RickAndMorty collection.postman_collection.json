@@ -1,0 +1,844 @@
+{
+	"info": {
+		"_postman_id": "a5ea1772-907a-44b6-883c-23546f847bd5",
+		"name": "RickAndMorty collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21278449"
+	},
+	"item": [
+		{
+			"name": "home page test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"}); ",
+							"pm.test(\"Body is not empty\", function () { ",
+							"        pm.response.to.be.withBody;",
+							"    });",
+							"pm.test(\"Body is JSON\", function () { ",
+							"        pm.response.to.be.json;",
+							"    });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "character page test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Body is not empty\", function () { ",
+							"        pm.response.to.be.withBody;",
+							"    });",
+							"pm.test(\"Body is JSON\", function () { ",
+							"        pm.response.to.be.json;",
+							"    });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New charater creation",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 827,\n    \"name\": \"Test char\",\n    \"status\": \"test\",\n    \"species\": \"test\",\n    \"type\": \"\",\n    \"gender\": \"test\",\n    \"origin\": {\n        \"name\": \"Earth (C-137)\",\n        \"url\": \"https://rickandmortyapi.com/api/location/1\"\n    },\n    \"location\": {\n        \"name\": \"Citadel of Ricks\",\n        \"url\": \"https://rickandmortyapi.com/api/location/827\"\n    },\n    \"image\": \"https://rickandmortyapi.com/api/character/avatar/827.jpeg\",\n    \"episode\": [\n        \"https://rickandmortyapi.com/api/episode/1\",\n        \"https://rickandmortyapi.com/api/episode/2\",\n        \"https://rickandmortyapi.com/api/episode/3\",\n        \"https://rickandmortyapi.com/api/episode/4\",\n        \"https://rickandmortyapi.com/api/episode/5\",\n        \"https://rickandmortyapi.com/api/episode/6\",\n        \"https://rickandmortyapi.com/api/episode/7\",\n        \"https://rickandmortyapi.com/api/episode/8\",\n        \"https://rickandmortyapi.com/api/episode/9\",\n        \"https://rickandmortyapi.com/api/episode/10\",\n        \"https://rickandmortyapi.com/api/episode/11\",\n        \"https://rickandmortyapi.com/api/episode/12\",\n        \"https://rickandmortyapi.com/api/episode/13\",\n        \"https://rickandmortyapi.com/api/episode/14\",\n        \"https://rickandmortyapi.com/api/episode/15\",\n        \"https://rickandmortyapi.com/api/episode/16\",\n        \"https://rickandmortyapi.com/api/episode/17\",\n        \"https://rickandmortyapi.com/api/episode/18\",\n        \"https://rickandmortyapi.com/api/episode/19\",\n        \"https://rickandmortyapi.com/api/episode/20\",\n        \"https://rickandmortyapi.com/api/episode/21\",\n        \"https://rickandmortyapi.com/api/episode/22\",\n        \"https://rickandmortyapi.com/api/episode/23\",\n        \"https://rickandmortyapi.com/api/episode/24\",\n        \"https://rickandmortyapi.com/api/episode/25\",\n        \"https://rickandmortyapi.com/api/episode/26\",\n        \"https://rickandmortyapi.com/api/episode/27\",\n        \"https://rickandmortyapi.com/api/episode/28\",\n        \"https://rickandmortyapi.com/api/episode/29\",\n        \"https://rickandmortyapi.com/api/episode/30\",\n        \"https://rickandmortyapi.com/api/episode/31\",\n        \"https://rickandmortyapi.com/api/episode/32\",\n        \"https://rickandmortyapi.com/api/episode/33\",\n        \"https://rickandmortyapi.com/api/episode/34\",\n        \"https://rickandmortyapi.com/api/episode/35\",\n        \"https://rickandmortyapi.com/api/episode/36\",\n        \"https://rickandmortyapi.com/api/episode/37\",\n        \"https://rickandmortyapi.com/api/episode/38\",\n        \"https://rickandmortyapi.com/api/episode/39\",\n        \"https://rickandmortyapi.com/api/episode/40\",\n        \"https://rickandmortyapi.com/api/episode/41\",\n        \"https://rickandmortyapi.com/api/episode/42\",\n        \"https://rickandmortyapi.com/api/episode/43\",\n        \"https://rickandmortyapi.com/api/episode/44\",\n        \"https://rickandmortyapi.com/api/episode/45\",\n        \"https://rickandmortyapi.com/api/episode/46\",\n        \"https://rickandmortyapi.com/api/episode/47\",\n        \"https://rickandmortyapi.com/api/episode/48\",\n        \"https://rickandmortyapi.com/api/episode/49\",\n        \"https://rickandmortyapi.com/api/episode/50\",\n        \"https://rickandmortyapi.com/api/episode/51\"\n    ],\n    \"url\": \"https://rickandmortyapi.com/api/character/827\",\n    \"created\": \"2017-11-04T18:48:46.250Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Character deletion",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 827,\n    \"name\": \"Test char\",\n    \"status\": \"test\",\n    \"species\": \"test\",\n    \"type\": \"\",\n    \"gender\": \"test\",\n    \"origin\": {\n        \"name\": \"Earth (C-137)\",\n        \"url\": \"https://rickandmortyapi.com/api/location/1\"\n    },\n    \"location\": {\n        \"name\": \"Citadel of Ricks\",\n        \"url\": \"https://rickandmortyapi.com/api/location/827\"\n    },\n    \"image\": \"https://rickandmortyapi.com/api/character/avatar/827.jpeg\",\n    \"episode\": [\n        \"https://rickandmortyapi.com/api/episode/1\",\n        \"https://rickandmortyapi.com/api/episode/2\",\n        \"https://rickandmortyapi.com/api/episode/3\",\n        \"https://rickandmortyapi.com/api/episode/4\",\n        \"https://rickandmortyapi.com/api/episode/5\",\n        \"https://rickandmortyapi.com/api/episode/6\",\n        \"https://rickandmortyapi.com/api/episode/7\",\n        \"https://rickandmortyapi.com/api/episode/8\",\n        \"https://rickandmortyapi.com/api/episode/9\",\n        \"https://rickandmortyapi.com/api/episode/10\",\n        \"https://rickandmortyapi.com/api/episode/11\",\n        \"https://rickandmortyapi.com/api/episode/12\",\n        \"https://rickandmortyapi.com/api/episode/13\",\n        \"https://rickandmortyapi.com/api/episode/14\",\n        \"https://rickandmortyapi.com/api/episode/15\",\n        \"https://rickandmortyapi.com/api/episode/16\",\n        \"https://rickandmortyapi.com/api/episode/17\",\n        \"https://rickandmortyapi.com/api/episode/18\",\n        \"https://rickandmortyapi.com/api/episode/19\",\n        \"https://rickandmortyapi.com/api/episode/20\",\n        \"https://rickandmortyapi.com/api/episode/21\",\n        \"https://rickandmortyapi.com/api/episode/22\",\n        \"https://rickandmortyapi.com/api/episode/23\",\n        \"https://rickandmortyapi.com/api/episode/24\",\n        \"https://rickandmortyapi.com/api/episode/25\",\n        \"https://rickandmortyapi.com/api/episode/26\",\n        \"https://rickandmortyapi.com/api/episode/27\",\n        \"https://rickandmortyapi.com/api/episode/28\",\n        \"https://rickandmortyapi.com/api/episode/29\",\n        \"https://rickandmortyapi.com/api/episode/30\",\n        \"https://rickandmortyapi.com/api/episode/31\",\n        \"https://rickandmortyapi.com/api/episode/32\",\n        \"https://rickandmortyapi.com/api/episode/33\",\n        \"https://rickandmortyapi.com/api/episode/34\",\n        \"https://rickandmortyapi.com/api/episode/35\",\n        \"https://rickandmortyapi.com/api/episode/36\",\n        \"https://rickandmortyapi.com/api/episode/37\",\n        \"https://rickandmortyapi.com/api/episode/38\",\n        \"https://rickandmortyapi.com/api/episode/39\",\n        \"https://rickandmortyapi.com/api/episode/40\",\n        \"https://rickandmortyapi.com/api/episode/41\",\n        \"https://rickandmortyapi.com/api/episode/42\",\n        \"https://rickandmortyapi.com/api/episode/43\",\n        \"https://rickandmortyapi.com/api/episode/44\",\n        \"https://rickandmortyapi.com/api/episode/45\",\n        \"https://rickandmortyapi.com/api/episode/46\",\n        \"https://rickandmortyapi.com/api/episode/47\",\n        \"https://rickandmortyapi.com/api/episode/48\",\n        \"https://rickandmortyapi.com/api/episode/49\",\n        \"https://rickandmortyapi.com/api/episode/50\",\n        \"https://rickandmortyapi.com/api/episode/51\"\n    ],\n    \"url\": \"https://rickandmortyapi.com/api/character/827\",\n    \"created\": \"2017-11-04T18:48:46.250Z\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character/2",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Body is not empty\", function () { ",
+							"        pm.response.to.be.withBody;",
+							"    });",
+							"pm.test(\"Body is JSON\", function () { ",
+							"        pm.response.to.be.json;",
+							"    });",
+							"pm.test(\"ID check\", () => {",
+							"  const response = pm.response.json();",
+							"  pm.expect(response).to.have.property(\"id\", 1);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character/1",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter by ID Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Body is not empty\", function () { ",
+							"        pm.response.to.be.withBody;",
+							"    });",
+							"pm.test(\"Body is JSON\", function () { ",
+							"        pm.response.to.be.json;",
+							"    });",
+							"pm.test(\"ID check\", () => {",
+							"  const response = pm.response.json();",
+							"  pm.expect(response).to.have.property(\"id\", 1);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character/1",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter by multiple IDs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Body is not empty\", function () { ",
+							"        pm.response.to.be.withBody;",
+							"    });",
+							"pm.test(\"Body is JSON\", function () { ",
+							"        pm.response.to.be.json;",
+							"    });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character/1,2,826",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character",
+						"1,2,826"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter by name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Body is not empty\", function () { ",
+							"        pm.response.to.be.withBody;",
+							"    });",
+							"pm.test(\"Body is JSON\", function () { ",
+							"        pm.response.to.be.json;",
+							"    });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character?name=Rick",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Rick"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter by species",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Body is not empty\", function () { ",
+							"        pm.response.to.be.withBody;",
+							"    });",
+							"pm.test(\"Body is JSON\", function () { ",
+							"        pm.response.to.be.json;",
+							"    });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character?species=human",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character"
+					],
+					"query": [
+						{
+							"key": "species",
+							"value": "human"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter by type",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Body is not empty\", function () { ",
+							"        pm.response.to.be.withBody;",
+							"    });",
+							"pm.test(\"Body is JSON\", function () { ",
+							"        pm.response.to.be.json;",
+							"    });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character?type=Superhuman",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "Superhuman"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter by gender",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Body is not empty\", function () { ",
+							"        pm.response.to.be.withBody;",
+							"    });",
+							"pm.test(\"Body is JSON\", function () { ",
+							"        pm.response.to.be.json;",
+							"    });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character?gender=male",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character"
+					],
+					"query": [
+						{
+							"key": "gender",
+							"value": "male"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter by page",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});",
+							"pm.test(\"Body is not empty\", function () { ",
+							"        pm.response.to.be.withBody;",
+							"    });",
+							"pm.test(\"Body is JSON\", function () { ",
+							"        pm.response.to.be.json;",
+							"    });"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character?page=2",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter by every param",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character?gender=male",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character"
+					],
+					"query": [
+						{
+							"key": "gender",
+							"value": "male"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "filter by invalid param",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {",
+							"    pm.response.to.have.status(404);",
+							"});",
+							"pm.test(\"Response time is less than 200ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character?gender=123213",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character"
+					],
+					"query": [
+						{
+							"key": "gender",
+							"value": "123213"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "character IMG",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"pm.test(\"Content-Type is image\", function () {",
+							"    pm.response.to.be.header(\"Content-Type\", \"image/jpeg\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+					"protocol": "https",
+					"host": [
+						"rickandmortyapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"character",
+						"avatar",
+						"1.jpeg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
